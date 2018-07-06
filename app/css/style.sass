@@ -41,6 +41,19 @@ a
 		transition: .5s ease
 		text-decoration: none
 
+
+h1
+	font-size: 69px
+	line-height: 60px
+	margin: 0 0px 40px
+	color: #000
+	+rob-th
+h2
+	font-size: 30px
+	line-height: 28px
+	margin: 0 0px 40px
+	color: $titlecolor
+	+rob-l
 .btn
 	width: 100%
 	max-width: 100%
@@ -153,7 +166,7 @@ a
 		.navbar-nav
 			display: block
 			margin: 0
-			padding: 0
+			padding: 5px 0px 0px
 			font-size: 0
 			text-align: center
 			line-height: 80px
@@ -161,9 +174,10 @@ a
 				display: inline-block
 				text-align: center
 				a
+					display: inline-block
 					+rob-l
 					font-size: 14px
-					padding: 0px 37px
+					padding: 10px 37px
 					line-height: 20px
 					color: $textblue
 					&:hover
@@ -196,15 +210,99 @@ a
 			background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%) /* Chrome10-25,Safari5.1-6 */
 			background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ) /* IE6-9 */
-	&__about
-		margin-top: -100px
+	&__info
+		margin-top: -50px
 		position: relative
 		z-index: 2
 		h1
-			font-size: 69px
-			line-height: 60px
-			+rob-th
-	&__
+			margin-bottom: 65px
+		&-icon
+			margin: 10px 0px 25px
+		&-form
+			width: 100%
+			max-width: 520px
+			margin: 0 auto
+			.form-group
+				margin-bottom: 25px
+				position: relative
+				label
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					line-height: 60px
+					font-size: 24px
+					+rob-r
+					color: $gray
+				.form-control
+					width: 100%
+					height: 60px
+					border: 1px solid $gray
+					border-radius: 3px
+					text-align: center
+					padding-top: 10px
+					font-size: 20px
+					+rob-r
+				.select__date
+					display: block
+					width: 100%
+					max-width: 320px
+					margin: 0 auto
+					height: 60px
+					border: 1px solid $gray
+					border-radius: 3px
+					text-align: center
+					position: relative
+					.icon
+						width: 15px
+						height: 10px
+						display: inline-block
+						background: url("../img/arrow.png") 0 0 no-repeat
+						position: absolute
+						top: 25px
+						right: 20px
+						transform: rotate(0deg)
+					&-drop
+						display: none
+						position: absolute
+						top: 100%
+						left: 0
+						right: 0
+						height: 300px
+						margin-top: 2px
+						padding: 30px 0px 10px
+						z-index: 9
+						background: #ffffff
+						border-radius: 5px
+						box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2)
+						ul
+							padding: 0
+							margin: 0
+							height: 240px
+							overflow: auto
+							li
+								display: block
+								a
+									display: block
+									font-size: 20px
+									+rob-l
+									padding: 5px 0px
+									color: $blue
+					&.active
+						.icon
+							transform: rotate(180deg)
+
+				&.active
+					label
+						top: 5px
+						font-size: 14px
+						line-height: 20px
+					.form-control
+						border: 1px solid $blue
+
+	&__experience
+	&__js
+	&__about
 //Main styles end
 
 //Footer styles
