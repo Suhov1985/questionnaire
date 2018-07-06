@@ -121,9 +121,6 @@ h2
 	margin: 0 auto
 .text-center
 	text-align: center
-.irs
-	margin-left: -11px
-	margin-right: -11px
 .irs-slider
 	width: 23px
 	height: 26px
@@ -216,8 +213,6 @@ h2
 
 //Main styles
 .main
-	max-width: 100%
-	overflow-y: hidden
 	&__banner
 		position: relative
 		display: block
@@ -271,6 +266,8 @@ h2
 					padding-top: 10px
 					font-size: 20px
 					+rob-r
+					&:focus
+						border: 1px solid $blue
 				.select__date
 					display: block
 					width: 100%
@@ -325,8 +322,6 @@ h2
 						top: 5px
 						font-size: 14px
 						line-height: 20px
-					.form-control
-						border: 1px solid $blue
 
 	&__experience
 		margin-bottom: 120px
@@ -373,10 +368,12 @@ h2
 					top: 100%
 					margin-top: 5px
 					left: -1px
-				span
+				.desc-text
 					display: inline-block
 					width: 100%
 					max-width: 178px
+				.mob-text
+					display: none
 				&:first-child
 					&:before
 						left: 1px
@@ -409,6 +406,7 @@ h2
 					border: 1px solid $gray
 					resize: none
 					font-size: 20px
+					text-align: left
 					+rob-r
 					color: $gray
 					padding: 24px 20px
@@ -420,14 +418,69 @@ h2
 //Main styles end
 
 //Media styles
-@media(min-width: 780px)
+@media(min-width: 830px)
+	.irs
+		margin-left: -11px
+		margin-right: -11px
 	.js__slider-block
 		width: 770px
 		margin-left: -16px
+@media(max-width: 830px)
+	.js__slider-block
+		max-width: 100%
+		padding-bottom: 50px
+	.main__js
+		max-width: 100%
+		overflow-x: hidden
+	.irs
+		margin-left: -11px
+		margin-right: -11px
+
 @media(max-width: 767px)
 	.header
+		height: auto
+		min-height: 80px
+		position: relative
 		.navbar
 			.navbar-toggle
 				display: inline-block
+				margin-top: 20px
 			.navbar-collapse
-				display: none
+				position: absolute
+				background: #ffffff
+				top: -100%
+				left: 0
+				right: 0
+				visibility: hidden
+				opacity: 0
+				height: 0px
+				z-index: 9
+				transition: all .5s ease-in-out
+				li
+					display: block
+					a
+						display: block
+						transition: none
+				&.active
+					visibility: visible
+					top: 100%
+					opacity: 1
+					height: auto
+					transition: all .5s ease-in-out
+	.main
+		&__experience
+			&-block
+				display: block
+				padding: 0px 15px
+				&:first-child
+					width: 100%
+				&:nth-child(2)
+					width: 100%
+		&__js
+			.js__slider-texts
+				.js__slider-text
+					.desc-text
+						display: none
+					.mob-text
+						display: block
+

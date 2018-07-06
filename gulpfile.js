@@ -47,7 +47,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
-		'app/js/*.js', // Берем jQuery
+		'app/js/*.js' // Берем jQuery
 	])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // Сжимаем JS файл
@@ -79,10 +79,10 @@ gulp.task('clean', function() {
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
-		'app/css/*.min.css'] )
+		'app/css/*.min.css' , 'app/css/ion.rangeSlider.css'] )
 		.pipe(gulp.dest('src/css'));
 
-	var buildJs = gulp.src('app/js/libs.min.js') // Переносим скрипты в продакшен
+	var buildJs = gulp.src('app/js/*.js') // Переносим скрипты в продакшен
 		.pipe(gulp.dest('src/js'));
 
 	var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
