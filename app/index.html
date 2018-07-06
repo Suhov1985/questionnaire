@@ -10,6 +10,7 @@
 	<meta name = "description" content = "Title"/><!-- Description of the page -->
 	<meta name = "author" content = "Grebenyuk Viktor"><!-- Author Name -->
 
+	<link rel = "stylesheet" href = "css/ion.rangeSlider.css"><!-- rangeSlider Style -->
 	<link rel = "stylesheet" href = "css/style.min.css"><!-- Custom Style -->
 </head>
 <body>
@@ -157,6 +158,15 @@
 			<div class="container">
 				<div class="main__js-icon"><img src="img/js-icon.png" alt="Icon"></div>
 				<h2>Уровень владения JavaScript</h2>
+				<div class="js__slider-block">
+					<div class="js__slider-texts">
+						<div class="js__slider-text"><span>Не владею</span></div>
+						<div class="js__slider-text"><span>Использую готовые <br> решения</span></div>
+						<div class="js__slider-text"><span>Использую готовые решения и умею и переделывать</span></div>
+						<div class="js__slider-text"><span>Пишу сложный JS с нуля</span></div>
+					</div>
+					<input type="text" id="js__slider" name="js__slider" value="" />
+				</div>
 			</div>
 		</section>
 		<section class="main__about text-center" id="about">
@@ -177,12 +187,8 @@
 		</section>
 	</main>
 <!--MAIN END-->
-
-<!--FOOTER-->
-	<footer class="footer">
-	</footer>
-<!--FOOTER END-->
 	<script src = "js/jquery.min.js"></script><!-- Jquery Library -->
+	<script src = "js/ion.rangeSlider.min.js"></script><!-- rangeSlider Library -->
 	<script src = "js/app.js"></script><!-- Custom Library -->
 </body>
 </html>

@@ -121,6 +121,45 @@ h2
 	margin: 0 auto
 .text-center
 	text-align: center
+.irs
+	margin-left: -11px
+	margin-right: -11px
+.irs-slider
+	width: 23px
+	height: 26px
+	background: url("../img/slider-btn.png") 0 0 no-repeat
+	background-size: cover
+	top: 20px
+.irs-bar-edge
+	display: none
+.irs-single
+	font-size: 0
+.irs-min, .irs-max
+	font-size: 0
+.irs-grid
+	position: absolute
+	height: 15px
+	width: 100%
+	background: url("../img/slider-gray.png") top center no-repeat
+.irs-bar
+	height: 15px
+	width: 100%
+	left: 0px
+	background: url("../img/slider-gradient.png") 0 0 no-repeat
+.irs-grid-pol.small
+	display: none
+.irs-grid
+	bottom: auto
+	top: 0
+	left: 0px
+.irs-grid-text
+	font-size: 0
+.irs-grid-pol
+	height: 15px
+	background: #fff
+	z-index: 2
+.irs-min, .irs-from
+	display: none
 //OTHER STYLES END
 
 //Header styles
@@ -177,6 +216,8 @@ h2
 
 //Main styles
 .main
+	max-width: 100%
+	overflow-y: hidden
 	&__banner
 		position: relative
 		display: block
@@ -305,16 +346,56 @@ h2
 			margin: 30px 0px 20px
 
 	&__js
-		margin-bottom: 70px
+		margin-bottom: 120px
+		h2
+			margin-bottom: 55px
+		.js__slider-texts
+			display: block
+			width: 100%
+			font-size: 0
+			margin-bottom: 15px
+			.js__slider-text
+				display: inline-block
+				width: 25%
+				text-align: left
+				font-size: 13px
+				line-height: 14px
+				+rob-l
+				vertical-align: bottom
+				position: relative
+				&:before
+					content: ""
+					display: inline-block
+					width: 1px
+					height: 15px
+					border-left: 1px dashed $gray
+					position: absolute
+					top: 100%
+					margin-top: 5px
+					left: -1px
+				span
+					display: inline-block
+					width: 100%
+					max-width: 178px
+				&:first-child
+					&:before
+						left: 1px
+				&:last-child
+					text-align: right
+					&:before
+						border-left: 0px dashed $gray
+						border-right: 1px dashed $gray
+						left: auto
+						right: 1px
 		&-icon
 			margin: 30px 0px 20px
 	&__about
 		margin-bottom: 70px
 		h2
-			margin-bottom: 25px
+			margin-bottom: 15px
 		p
 			max-width: 510px
-			margin: 0 auto 40px
+			margin: 0 auto 30px
 			font-size: 16px
 			+rob-l
 		&-form
@@ -338,14 +419,11 @@ h2
 			margin: 30px 0px 20px
 //Main styles end
 
-//Footer styles
-.footer
-	padding: 0
-//Footer styles end
-
 //Media styles
-@media(max-width: 1200px)
-@media(max-width: 992px)
+@media(min-width: 780px)
+	.js__slider-block
+		width: 770px
+		margin-left: -16px
 @media(max-width: 767px)
 	.header
 		.navbar
