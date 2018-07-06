@@ -59,13 +59,19 @@ h2
 	max-width: 100%
 	color: #363636
 	text-align: center
-	font-size: 13px
+	font-size: 16px
+	+rob-l
 	padding: 0
 	cursor: pointer
 	&:hover
 		opacity: .8
 	&__blue
 		background: $blue
+		border-radius: 10px
+		width: 116px
+		height: 51px
+		border: 1px solid $blue
+		color: #fff
 		&:hover, &:focus, &:active
 			opacity: .8
 .block
@@ -282,6 +288,7 @@ h2
 						border: 1px solid $blue
 
 	&__experience
+		margin-bottom: 120px
 		.checkbox
 			margin: 10px 0px 15px
 		&-wrap
@@ -298,7 +305,37 @@ h2
 			margin: 30px 0px 20px
 
 	&__js
+		margin-bottom: 70px
+		&-icon
+			margin: 30px 0px 20px
 	&__about
+		margin-bottom: 70px
+		h2
+			margin-bottom: 25px
+		p
+			max-width: 510px
+			margin: 0 auto 40px
+			font-size: 16px
+			+rob-l
+		&-form
+			form
+				width: 100%
+				max-width: 520px
+				margin: 0 auto
+				textarea
+					height: 180px
+					width: 100%
+					border: 1px solid $gray
+					resize: none
+					font-size: 20px
+					+rob-r
+					color: $gray
+					padding: 24px 20px
+					border-radius: 5px
+				.form-group
+					margin-bottom: 70px
+		&-icon
+			margin: 30px 0px 20px
 //Main styles end
 
 //Footer styles
